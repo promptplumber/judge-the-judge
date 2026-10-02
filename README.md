@@ -1,7 +1,7 @@
 # Judge the Judge
 
 An LLM decides whether a product is relevant to a search query. This repo measures how far you can trust that decision,
-using repeated runs, confidence intervals and a blind human review, on Amazon's ESCI shopping-queries benchmark.
+on Amazon's ESCI shopping-queries benchmark.
 Professionally it's a relevance eval harness. The point isn't that an LLM can judge relevance; everyone knows that.
 It's whether you can trust the judge.
 
@@ -231,6 +231,8 @@ A run that is interrupted resumes with `python -m src.harness --resume <run_id>`
 [costs/api_cost_log.jsonl](costs/api_cost_log.jsonl); `python -m src.costs` totals it. Whole project spend, including a stalled
 run that had to be thrown away, was $2.40. `make check-readme` re-runs the code and asserts that the numbers quoted in this README
 match what it prints.
+
+## Repo layout
 
 ```
 config/eval_config.yaml   every pinned knob: model, prompt version, dataset revision, seeds, K, pricing
