@@ -1,0 +1,134 @@
+{
+ "run_id": "20261002T033605Z_v1_gpt-5.6-luna",
+ "seed": 11,
+ "n_requested": 15,
+ "population": "Exact + negation-keyword query, wrong on every valid run",
+ "population_size": 44,
+ "population_ids": [
+  418,
+  10595,
+  12931,
+  14324,
+  15092,
+  16711,
+  20999,
+  22621,
+  25021,
+  25771,
+  26559,
+  27748,
+  28929,
+  42354,
+  46179,
+  150093,
+  176007,
+  189080,
+  226583,
+  332438,
+  555757,
+  652246,
+  714142,
+  828686,
+  871828,
+  1131937,
+  1325943,
+  1386308,
+  1408546,
+  1443000,
+  1457562,
+  1459308,
+  1478354,
+  1497115,
+  1666158,
+  1667487,
+  1875138,
+  1938630,
+  2135331,
+  2156553,
+  2182686,
+  2187518,
+  2201464,
+  2257617
+ ],
+ "already_labeled_in_round_1": [
+  12931
+ ],
+ "sampled_from": 43,
+ "items": [
+  {
+   "example_id": 10595,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 14324,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 15092,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 20999,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 176007,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 226583,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 555757,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 652246,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 828686,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 871828,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 1131937,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 1457562,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 1667487,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 2135331,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  },
+  {
+   "example_id": 2156553,
+   "esci_label": "Exact",
+   "judge_yes_frac": 0.0
+  }
+ ]
+}

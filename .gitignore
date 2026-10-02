@@ -1,0 +1,7 @@
+data/
+.env
+*.parquet
+__pycache__/
+.venv/
+.pytest_cache/
+.DS_Store

@@ -1,0 +1,84 @@
+NEGATION REVIEW  run 20261002T033605Z_v1_gpt-5.6-luna  seed 11
+  population: Exact + negation-keyword query, wrong on every valid run (N=44); sampled 15 at random from the 43 not labeled in round 1
+  labels: no=12 yes=3 unsure=0  (used n=15)
+  Every item in this population has ESCI=Exact and the judge saying 'not relevant' on all 5 runs, so:
+    human 'no'  -> human CONFIRMS the judge (and ESCI's Exact label looks wrong)
+    human 'yes' -> the judge is genuinely wrong here (ESCI right)
+
+JUDGE vs HUMAN on this stratum: 12/15 = 80.0%
+  Wilson 95% CI [54.8%, 93.0%]   Clopper-Pearson (exact) 95% CI [51.9%, 95.7%]
+  scaled to the 43 unlabeled population members: about 34 confirmed (plausible range 22-41); intervals ignore the finite-population correction (n/N = 35%), so they are slightly conservative
+  round-1 item 12931: title-only 'unsure', after details 'yes' -> not usable title-only; with its final label this would be 12/16 confirmed, 1 judge error
+
+BY PRE-ASSIGNED CATEGORY (assigned by Claude from query+title before seeing your labels)
+  category                                              n  human no (confirms judge)  human yes (judge wrong)
+  C1 title contradicts the exclusion                    6              5                        1
+  C2 title silent on the exclusion (unverifiable)       5              4                        1
+  C3 not a real exclusion / different product           3              3                        0
+  C4 title satisfies the exclusion                      1              0                        1
+
+ITEMS (judge said 'not relevant' on all 5 runs for every row)
+  [176007] C2  human=no
+      query: alarm clock without snooze
+      title: Analog Alarm Clock, 4 inch Super Silent Non Ticking Small Clock with Night Light, Battery Operated, Simply Design, for Bedroon, Bedside, Desk, (Green)
+      judge: The product is an alarm clock but its title does not confirm that it lacks a snooze function.
+  [1667487] C1  human=yes
+      query: queen size bed spreads not comforters
+      title: Mezzati Bedspread Coverlet Set Blue-Ocean Teal – Prestige Collection - Comforter Bedding Cover – Brushed Microfiber Bedding 3-Piece Quilt Set (Queen/Full, Blue Ocean Teal)
+      judge: The product is explicitly described as a comforter bedding cover, which the query excludes.
+  [226583] C3  human=no
+      query: armour thyroid without prescription
+      title: Zhou Thyroid Support Complex with Iodine | Energy, Metabolism & Focus Formula | Vegetarian, No Soy or Gluten | 30 Servings, 60 Caps
+      judge: The product is a dietary thyroid-support supplement, not Armour Thyroid medication available without a prescription.
+  [20999] C2  human=no
+      query: 1 for 1 chlorine free pads without wings
+      title: SEVENTH GENERATION Free & Clear Maxi Pads, 24 Count (2 Pack)
+      judge: The title identifies maxi pads but does not confirm they are chlorine-free or without wings, and it specifies a 2-pack rather than one pack.
+  [2156553] C1  human=no
+      query: weeds control without poisons
+      title: Tenacity Turf Herbicide - 8 ounces
+      judge: The product is an herbicide, which does not directly satisfy the request for weed control without poisons.
+  [555757] C2  human=yes
+      query: coffee maker without pot
+      title: Cuisinart DCC-3000P1 12-Cup Programmable Coffee Maker Coffeemaker, Black
+      judge: The title identifies a 12-cup coffee maker but does not indicate that it is sold without a pot or carafe.
+  [10595] C1  human=no
+      query: .8 beading wire plastic not stretchy
+      title: 328 FT Elastic String for Bracelets, Premium 0.8mm Jewelry Elastic Cord Clear, Strong Stretchy String Elastic Cord for Bracelet, Jewelry Making, Beads, Crafts, Crystal String Beading Thread for Kids
+      judge: The product matches the 0.8 mm plastic-like beading cord dimension but is explicitly elastic and stretchy, contrary to the query's requirement for not stretchy wire.
+  [2135331] C3  human=no
+      query: waiting is not easy an elephant and piggie book
+      title: My Friend is Sad (An Elephant and Piggie Book)
+      judge: The product is an Elephant and Piggie book but it is not the specifically requested title “Waiting Is Not Easy!”.
+  [1131937] C2  human=no
+      query: kerastase shampoo without sulfates
+      title: Kerastase Discipline Bain Fluidealiste Smooth-in-Motion Shampoo for Unisex, 8.5 Ounce (Packaging May Vary)
+      judge: The product is a Kerastase shampoo, but its title does not indicate that it is sulfate-free.
+  [871828] C4  human=yes
+      query: futon frames full size without mattress
+      title: DHP Futon Wood Arms and Side Storage Mattress Sold Separately, Espresso Frame
+      judge: The product is a futon frame with the mattress sold separately, but its title does not specify that it is full size.
+  [1457562] C3  human=no
+      query: no u card game
+      title: Pandasaurus Games The Mind - Family-Friendly Board Games - Adult Games for Game Night - Card Games for Adults, Teens & Kids (2-4 Players)
+      judge: The product is The Mind, not the specifically requested No U card game.
+  [15092] C1  human=no
+      query: 05 nissan titan f r not strut mount
+      title: MOSTPLUS 171358 2X Front Complete Struts Shock Absorbers with Mounts Compatible for 2004-2015 Nissan Titan (Set of 2)
+      judge: The query excludes strut mounts, but this product is a complete strut assembly that explicitly includes mounts.
+  [14324] C1  human=no
+      query: 013 nail color not gel
+      title: Allenbelle Color Changing Nail Polish Gift set Color Changing Gel Polish Set Mood Soak Off Uv Led Gel Nail Polish 013
+      judge: The product matches shade number 013 but is explicitly a gel polish, which conflicts with the query's requirement for not gel.
+  [652246] C2  human=no
+      query: dental floss without pfas
+      title: Amazon Brand - Solimo Extra Comfort Mint Dental Floss, 40 M (Pack of 6)
+      judge: The product is dental floss, but its title does not indicate that it is without PFAS.
+  [828686] C1  human=no
+      query: floor lamp without shade
+      title: Boncoo LED Floor Lamp Fully Dimmable Modern Standing Lamp Arc Floor Lamp with Adjustable Drum Shade, Golden Tall Pole Reading Lamp Corner Light for Living Room Bedroom Study Room, 8W LED Bulb Included
+      judge: The query specifically excludes a shade, but the product includes an adjustable drum shade.
+
+IMPLICATION FOR THE 'Exact + negation = 43.7% accuracy' FINDING (n=86 = 42 + 44)
+  judge agreement with the HUMAN across the whole Exact+negation slice: about 87.1% (bootstrap 95% CI [74.2%, 96.6%]),
+  versus 43.7% against ESCI. Built from 11 round-1 items (the 42) and these 15 (the 44), so wide.

@@ -1,0 +1,725 @@
+{
+ "metadata": {
+  "run_id": "20261002T010507Z_v1_gpt-5.6-luna",
+  "timestamp": "2026-10-02T01:05:07+00:00",
+  "mode": "standard",
+  "model": "gpt-5.6-luna",
+  "temperature": 1,
+  "max_completion_tokens": 500,
+  "prompt_version": "v1",
+  "prompt_sha256": "daa4a62ece581f9c",
+  "dataset": "tasksource/esci",
+  "dataset_revision": "8113b17a5d4099e20243282c926f1bc1a08a4d13",
+  "dataset_version": "v1",
+  "seed": 42,
+  "k": 3,
+  "n_examples": 20,
+  "limit": 20,
+  "n_calls": 60,
+  "n_ok": 60,
+  "n_parse_failures": 0,
+  "n_infra_failures": 0
+ },
+ "examples": [
+  {
+   "example_id": 31995,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a men's 1/4-zip sweatshirt, while the query specifically requests a women's 1/4-zip pullover.",
+     "evidence": "Product title states \"Men's Adult 1/4 Zip Sweatshirt.\""
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a men's sweatshirt, while the query specifically requests a women's 1/4 zip pullover.",
+     "evidence": "The title identifies it as \"Men's Adult 1/4 Zip Sweatshirt.\""
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product matches the 1/4-zip pullover style but is explicitly marketed as men's rather than women's.",
+     "evidence": "The title identifies it as a \"Men's Adult 1/4 Zip Sweatshirt.\""
+    }
+   ]
+  },
+  {
+   "example_id": 39239,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The query specifically excludes a remote, but the product includes a remote control.",
+     "evidence": "Product title states \"with Remote Control.\""
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product matches 100 LEDs but includes a remote control, which violates the query's requirement for no remote.",
+     "evidence": "The title states \"100 LEDs\" and \"with Remote Control.\""
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The query specifically excludes a remote, but this product includes a remote control.",
+     "evidence": "The title states \u201cwith Remote Control.\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 94847,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Nike men's running shirt, but its title does not indicate that it is a '365 shirt' or associated with 365.",
+     "evidence": "The title identifies it as a \"Nike Men's Dry Miler Running Top Shortsleeve\"."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Nike running shirt, but its title does not indicate that it is a 365 shirt.",
+     "evidence": "The title identifies the item as a \"Nike Men's Dry Miler Running Top\"."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Nike running shirt, but its title does not indicate that it is a '365' shirt.",
+     "evidence": "The title identifies it as a \"Nike Men's Dry Miler Running Top\" with no mention of 365."
+    }
+   ]
+  },
+  {
+   "example_id": 292163,
+   "ground_truth_binary": 1,
+   "esci_label": "Exact",
+   "verdicts": [
+    true,
+    true,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "This product is a directly relevant large bathroom towel option because it is an extra-large jumbo bath sheet sold in a two-pack.",
+     "evidence": "The title specifies a \"Jumbo Bath Sheet\" measuring 35 x 70 inches and describes it as an \"Extra Large Bath Sheet Towel.\""
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a large bathroom towel suitable for shoppers seeking oversized bath towels.",
+     "evidence": "The title specifies a \"Jumbo Bath Sheet\" measuring 35 x 70 inches and describes it as an \"Extra Large Bath Sheet.\""
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "This product is a directly relevant large towel suitable for bathroom use.",
+     "evidence": "The title identifies it as a \"Jumbo Bath Sheet\" measuring 35 x 70 inches and sold as a 2-pack."
+    }
+   ]
+  },
+  {
+   "example_id": 363972,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a blue storage ottoman, but the title does not indicate that it is round.",
+     "evidence": "Title states \u201cStorage Ottoman\u201d and \u201cBlue Fabric,\u201d with no round shape specified."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a blue storage ottoman, but the title does not indicate that it is round as required by the query.",
+     "evidence": "Title specifies \u201cBlue Fabric Storage Ottoman\u201d but provides no round shape attribute."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product matches the blue storage ottoman requirement but does not indicate that it is round.",
+     "evidence": "The title says \"Storage Ottoman\" and \"Blue Fabric,\" but provides no round-shape attribute."
+    }
+   ]
+  },
+  {
+   "example_id": 380362,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a cleaning solution for bongs rather than a bong itself.",
+     "evidence": "The title identifies it as a \u201cBong Cleaner / Glass Pipe & Hookah Cleaner.\u201d"
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a cleaning solution for bongs rather than a bong itself, so it is not a directly relevant result for the query.",
+     "evidence": "The title describes it as a \u201cBong Cleaner / Glass Pipe & Hookah Cleaner.\u201d"
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a cleaning solution for bongs rather than a bong itself, so it is not a directly relevant result for the query.",
+     "evidence": "The title describes a \u201cBong Cleaner / Glass Pipe & Hookah Cleaner.\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 625647,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    true,
+    true,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a cute-looking ceramic indoor flower pot suitable for planting and matches the query directly.",
+     "evidence": "The title identifies it as a \"Ceramic Plant Pot\" and \"Indoor Flower Planter\" in pink with decorative glazing."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a cute decorative flower pot suitable for indoor plants.",
+     "evidence": "The title identifies it as a glazed ceramic indoor flower planter with a decorative pink finish and connected saucer."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a cute-looking ceramic flower pot suitable for indoor plants and matches the query directly.",
+     "evidence": "The title identifies it as a \"Ceramic Plant Pot\" and \"Indoor Flower Planter\" in pink."
+    }
+   ]
+  },
+  {
+   "example_id": 825195,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a blow-up doll, not a Fleshlight masturbator as requested by the query.",
+     "evidence": "The title identifies it as a \u201cBlow Up Judy Doll.\u201d"
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is an inflatable Judy doll, not a Fleshlight masturbatory device.",
+     "evidence": "Product title: \"Loftus International Blow Up Judy Doll\""
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is an inflatable doll rather than a Fleshlight-style masturbator.",
+     "evidence": "The title identifies it as a \"Blow Up Judy Doll.\""
+    }
+   ]
+  },
+  {
+   "example_id": 1015669,
+   "ground_truth_binary": 1,
+   "esci_label": "Exact",
+   "verdicts": [
+    true,
+    true,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a fleece hoody, directly matching the query for a hoody.",
+     "evidence": "The title explicitly says \"Fleece Hoody\"."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a hoody, directly matching the query.",
+     "evidence": "The title explicitly identifies it as a \"Fleece Hoody.\""
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a fleece hoody, directly matching the query for a hoody.",
+     "evidence": "The title explicitly includes \u201cFleece Hoody.\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 1052440,
+   "ground_truth_binary": 1,
+   "esci_label": "Exact",
+   "verdicts": [
+    false,
+    false,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is clearly men's polarized sunglasses, but the title does not indicate that they are designed for industrial use.",
+     "evidence": "The title says \"Men's\" and \"Polarized Shield Sunglasses\" but provides no industrial or work-safety designation."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is men's polarized sunglasses, but its title does not indicate that they are industrial or safety-rated.",
+     "evidence": "The title specifies \u201cMen's\u201d and \u201cPolarized Shield Sunglasses\u201d but does not mention industrial use or safety certification."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a men's polarized shield-style sunglass that could directly satisfy a search for durable industrial-oriented eyewear.",
+     "evidence": "The title specifies \"Men's\" and \"Polarized Shield Sunglasses.\""
+    }
+   ]
+  },
+  {
+   "example_id": 1270895,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The query specifies M Gallade EX, but the product is a Mega-Pidgeot-EX card.",
+     "evidence": "Product title identifies \u201cMega-Pidgeot-EX,\u201d not \u201cM Gallade EX.\u201d"
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Mega-Pidgeot-EX card, not the requested M Gallade EX card.",
+     "evidence": "Product title specifies \u201cMega-Pidgeot-EX (65/108),\u201d which differs from \u201cM Gallade EX.\u201d"
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Mega-Pidgeot-EX card, not the requested M Gallade EX card.",
+     "evidence": "The title identifies the card as \u201cMega-Pidgeot-EX (65/108).\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 1435344,
+   "ground_truth_binary": 1,
+   "esci_label": "Exact",
+   "verdicts": [
+    true,
+    true,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a coffee capsule rack designed to hold and organize espresso pods, making it relevant to a Nespresso rack search.",
+     "evidence": "The title identifies a 360-degree rotatable coffee capsule holder rack that holds 40 coffee pods."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "A shopper searching for a Nespresso rack could consider this a directly relevant capsule storage rack for espresso coffee pods.",
+     "evidence": "The title describes a 40-capacity spinning coffee capsule holder rack and espresso pod holder."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "This is a rack designed to hold coffee capsules or pods, making it a directly relevant storage product for a Nespresso rack search.",
+     "evidence": "The title describes a \u201cCapsule Spinning Carousel Holder\u201d and \u201cRack\u201d that holds 40 coffee pods."
+    }
+   ]
+  },
+  {
+   "example_id": 1444895,
+   "ground_truth_binary": 1,
+   "esci_label": "Exact",
+   "verdicts": [
+    true,
+    true,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "This is a facial acne moisturizer that could directly serve as a nighttime moisturizer for acne.",
+     "evidence": "The title identifies it as a \"Maximum Strength Acne Moisturizer Cream\" with 2% salicylic acid and 1% mandelic acid."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "This is a directly relevant acne moisturizer that could satisfy a nighttime face-moisturizer search.",
+     "evidence": "The title identifies it as a \u201cMaximum Strength Acne Moisturizer Cream\u201d containing salicylic acid and mandelic acid."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "This is a directly relevant acne moisturizer cream that could be used as a nighttime face moisturizer.",
+     "evidence": "The title identifies it as a \u201cMaximum Strength Acne Moisturizer Cream\u201d with salicylic and mandelic acids."
+    }
+   ]
+  },
+  {
+   "example_id": 1447776,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    true,
+    true,
+    true
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a Nike sneaker from the Off-White collaboration, directly matching the search for Nike Off-Whites.",
+     "evidence": "The title states \"Nike Mens Air Jordan 1 X Off White NRG.\""
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a Nike collaboration with Off-White, directly matching the search for Nike Off-Whites.",
+     "evidence": "The title states \"Nike Mens Air Jordan 1 X Off White NRG\"."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": true,
+     "justification": "The product is a Nike sneaker from the Off-White collaboration, directly matching the query.",
+     "evidence": "The title states \u201cNike Mens Air Jordan 1 X Off White.\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 1481228,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a general book about the World Hockey Association and does not indicate that it is for boys or specifically related to the Oilers.",
+     "evidence": "The title only identifies \u201cThe Rebel League: The Short and Unruly Life of the World Hockey Association.\u201d"
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a general history book about the World Hockey Association, not a boys' Edmonton Oilers item.",
+     "evidence": "The title is \u201cThe Rebel League: The Short and Unruly Life of the World Hockey Association.\u201d"
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a hockey history book rather than a boys' Edmonton Oilers item.",
+     "evidence": "The title identifies it as \"The Rebel League: The Short and Unruly Life of the World Hockey Association\" and does not mention Oilers or boys."
+    }
+   ]
+  },
+  {
+   "example_id": 1490859,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is an OPI pink nail polish but does not match the specifically requested shade, \u201cMeet a Boy as Cute as Can Be.\u201d",
+     "evidence": "The title identifies the shade as \u201cStrawberry Margarita,\u201d not \u201cMeet a Boy as Cute as Can Be.\u201d"
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The query specifies the OPI shade \u201cMeet a Boy as Cute as Can Be,\u201d but the product is a different shade.",
+     "evidence": "Product title identifies the shade as \u201cStrawberry Margarita.\u201d"
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is an OPI pink nail polish but does not match the specifically requested shade \"Meet a Boy as Cute as Can Be.\"",
+     "evidence": "The title identifies the shade as \"Strawberry Margarita,\" not \"Meet a Boy as Cute as Can Be.\""
+    }
+   ]
+  },
+  {
+   "example_id": 1859963,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product includes blood pressure monitoring but does not mention ECG, which is a required feature in the query.",
+     "evidence": "The title states \u201cMonitor Blood Pressure\u201d but contains no reference to ECG."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product includes blood pressure monitoring but does not mention an ECG feature, which is a required part of the query.",
+     "evidence": "The title says \u201cBlood Pressure\u201d and \u201cHeart Rate\u201d but does not mention ECG."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product includes blood pressure monitoring but does not mention ECG, which is a required feature in the query.",
+     "evidence": "The title states \u201cBlood Pressure\u201d but provides no mention of \u201cECG.\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 1977281,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Tecnu skin cleanser, not wipes as specifically requested.",
+     "evidence": "The title says \"Tecnu Original Outdoor Skin Cleanser - 12 oz, Pack of 3\" and does not mention wipes."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a Tecnu skin cleanser in bottles, not Tecnu wipes as specifically requested.",
+     "evidence": "The title says \u201cTecnu Original Outdoor Skin Cleanser - 12 oz, Pack of 3\u201d and does not mention wipes."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a liquid skin cleanser rather than wipes, so it does not directly match the query.",
+     "evidence": "The title says \"Tecnu Original Outdoor Skin Cleanser - 12 oz, Pack of 3\" and does not mention wipes."
+    }
+   ]
+  },
+  {
+   "example_id": 2119438,
+   "ground_truth_binary": 0,
+   "esci_label": "Substitute",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a generic multi-device charging station and does not mention the requested Vida brand or product line.",
+     "evidence": "The title identifies it as a \u201cKeyEntre 6 Port USB Charging Station,\u201d not Vida."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a charging station but does not mention the requested Vida brand or product name.",
+     "evidence": "The title identifies it as a KeyEntre 6 Port USB Charging Station, not a Vida charging station."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a generic KeyEntre charging station and does not indicate the requested Vida brand.",
+     "evidence": "The title identifies the brand as \u201cKeyEntre,\u201d not \u201cVida.\u201d"
+    }
+   ]
+  },
+  {
+   "example_id": 2128931,
+   "ground_truth_binary": 0,
+   "esci_label": "Irrelevant",
+   "verdicts": [
+    false,
+    false,
+    false
+   ],
+   "n_parse_failures": 0,
+   "n_infra_failures": 0,
+   "runs": [
+    {
+     "run": 0,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The query seeks a 46-inch Vizio sound bar, but this product is a universal TV wall mount rather than a sound bar.",
+     "evidence": "Product title identifies it as a \"TV Mount\" for 37\u201370 inch TVs."
+    },
+    {
+     "run": 1,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a universal TV wall mount, not a Vizio sound bar sized for a 46-inch TV.",
+     "evidence": "The title identifies it as a \"TV Mount\" for \"Most 37-70 Inch TV,\" with no sound bar or Vizio designation."
+    },
+    {
+     "run": 2,
+     "status": "ok",
+     "is_relevant": false,
+     "justification": "The product is a wall mount for 37\u201370 inch TVs, not a Vizio 46-inch sound bar.",
+     "evidence": "The title identifies it as a \u201cTV Mount\u201d with a \u201c37-70 Inch TV\u201d fit range."
+    }
+   ]
+  }
+ ]
+}

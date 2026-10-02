@@ -1,0 +1,46 @@
+# All pinned knobs live here. Change ONE thing at a time between runs.
+
+dataset:
+  name: tasksource/esci
+  revision: 8113b17a5d4099e20243282c926f1bc1a08a4d13   # pinned HF commit of the source data
+  version: v1                 # bump when the frozen slice changes
+  raw_dir: data/raw           # shards are downloaded here one at a time, then deleted (disk-constrained)
+  locale: us
+  small_version: 1
+  split: test
+  sample_size: 2000
+  seed: 42
+  path: data/eval_set_v1.parquet
+
+judge:
+  provider: openai
+  model: gpt-5.6-luna
+  temperature: 1              # gpt-5.6-luna only supports its default (1); 0 is rejected (verified).
+                              # Non-zero is what we want anyway: K runs measure judge stochasticity.
+  max_completion_tokens: 500  # this model rejects max_tokens; reasoning tokens (if any) count here
+  prompt_version: v1
+  timeout_s: 30
+  max_retries: 2              # SDK-level retries on transient errors before we call it an infra failure
+
+human_eval:                   # hand-labeling sample (disjoint strata; weights = N_h / n_h)
+  seed: 7
+  n_always_wrong: 15          # wrong on every valid run (candidates for loose labels)
+  n_exact_negation: 12        # ESCI Exact + negation-keyword query, not already always-wrong
+  n_random: 18                # everything else (the unbiased part)
+  dir: labeling
+  details_chars: 1200         # truncate bullets/description shown in the tool
+
+negation_review:              # targeted blind review of Exact+negation examples wrong on every run
+  seed: 11
+  n: 15
+
+costs:
+  log_path: costs/api_cost_log.jsonl   # append-only, one line per API call, whole project
+  pricing_usd_per_1m_tokens:           # standard API rates (completion tokens include any reasoning tokens)
+    gpt-5.6-luna: {input: 0.20, output: 1.20}
+
+harness:
+  k: 5                        # runs per example
+  mode: standard              # standard API for ALL runs, dev and full (batch code exists but is unused)
+  concurrency: 8              # thread pool cap (standard mode only)
+  results_dir: results

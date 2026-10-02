@@ -1,0 +1,43 @@
+RUN 20261002T010507Z_v1_gpt-5.6-luna
+  N=20 examples  K=3 runs  model=gpt-5.6-luna (temperature 1)  prompt=v1 [daa4a62ece581f9c]  dataset=v1 (seed 42, rev 8113b17a)
+  API cost for this run: $0.00 (0 logged calls)
+
+INFRASTRUCTURE (kept out of every quality number below)
+  calls=60  valid verdicts=60  parse failures=0  infra failures=0
+
+JUDGE ACCURACY (agreement with the binary ESCI label)
+  mean pass rate            86.7%     majority-class baseline  75.0%
+  95% CI over examples     [ 72.1%, 100.0%]   how much accuracy moves with which examples
+  95% CI over runs (t)     [ 79.5%,  93.8%]   how much the judge wobbles on this fixed set (K=3)
+  run-level pass rates     0.8500, 0.8500, 0.9000
+
+CAPABILITY vs CONSISTENCY   (agreement with the label, not self-consistency)
+  k=1:  pass@k  86.7%   pass^k  86.7%   (n=20)
+  k=2:  pass@k  88.3%   pass^k  85.0%   (n=20)
+  k=3:  pass@k  90.0%   pass^k  85.0%   (n=20)
+  (an LLM judge adds its own noise, and a 'miss' may be a loose label, not a judge error)
+
+PER-SLICE ACCURACY   [95% CI over examples]   (t over runs)   * = overall mean is outside the CI
+  no slice has n >= 30; too small to report per-slice intervals
+  skipped (n < 30): Exact (n=5); Substitute (n=8); Complement (n=0); Irrelevant (n=7); no (n=19); yes (n=1); Exact, no negation (n=5); Exact, negation (n=0); Substitute, no negation (n=8); Substitute, negation (n=0); Complement, no negation (n=0); Complement, negation (n=0); Irrelevant, no negation (n=6); Irrelevant, negation (n=1)
+  negation = keyword heuristic on the query (not, no, without, non, ...), not a parse
+
+CONFUSION (run-level, valid calls)       judge: relevant   not relevant
+  ground truth relevant (Exact)                13             2   <- false negatives
+  ground truth not relevant (S/C/I)             6            39
+                                          ^ false positives
+  precision  68.4%   recall  86.7%   specificity  86.7%   FPR  13.3%   FNR  13.3%
+  share of calls where the judge said 'relevant', by ESCI label:
+    Exact         86.7%
+    Substitute    25.0%
+    Irrelevant     0.0%
+
+CONSISTENCY ACROSS RUNS (examples)
+  right on every run 17   wrong on every run 2   mixed 1
+  wrong on every run: 0 are Exact (judge always says not relevant), 2 are S/C/I (judge always says relevant)
+  -> the always-wrong examples are the first place to look for loose ground truth (see results/FINDINGS.md)
+
+COMPARISON  A=20261002T010507Z_v1_gpt-5.6-luna  B=20261002T033605Z_v1_gpt-5.6-luna   delta = B - A
+  same prompt/model/config? prompt A=daa4a62ece581f9c B=daa4a62ece581f9c  model A=gpt-5.6-luna B=gpt-5.6-luna
+  paired per-example (N=20 common examples): delta +2.33 pts  95% CI [-2.24, +6.91]  -> not significant (CI includes 0)
+  Welch on run-level rates (K_A=3, K_B=5): delta +2.33 pts  95% CI [-3.40, +8.07]  t=1.20 dof=3.5 p=0.305

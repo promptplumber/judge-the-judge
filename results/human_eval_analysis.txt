@@ -1,0 +1,131 @@
+HUMAN REVIEW  run 20261002T033605Z_v1_gpt-5.6-luna  | 45 items labeled blind from the title only
+  human labels: yes=23 no=19 unsure=3 (unsure excluded from agreement; weights adjust to items used)
+  revised after seeing details: 4 items
+
+WEIGHTING CHECK  (the estimator should recover the known whole-set judge-vs-ESCI accuracy)
+  estimate from the 45-item sample:  71.7%  95% CI [ 63.4%,  76.8%]  (items used: 45)
+  true value on all 2000 examples:   72.6%   -> inside the CI
+
+AGREEMENT WITH THE HUMAN LABEL (title only)   whole-set estimate = stratum-weighted
+  judge vs human (fraction of the 5 runs that agree)    90.6%  95% CI [ 83.8%,  96.6%]  (items used: 42)
+  judge vs human (majority vote of runs)                93.2%  95% CI [ 87.6%,  98.3%]  (items used: 42)
+  ESCI label vs human                                   78.8%  95% CI [ 68.2%,  87.3%]  (items used: 42)
+  Cohen's kappa (weighted):  judge-majority vs human = 0.86   ESCI vs human = 0.58
+
+  per stratum   (n = items used; bootstrap 95% CI; strata are NOT equally hard by design)
+    stratum              N   n               judge vs human                ESCI vs human
+    always_wrong       465  14        71.4% [ 50.0%, 92.9%]        28.6% [  7.1%, 50.0%]
+    exact_negation      42  11        94.5% [ 83.6%,100.0%]        90.9% [ 72.7%,100.0%]
+    random_rest       1493  17        96.5% [ 90.6%,100.0%]        94.1% [ 82.4%,100.0%]
+
+SAME, using the human's FINAL label (after the optional details step)
+  judge vs human-final                                  88.8%  95% CI [ 80.9%,  95.3%]  (items used: 44)
+  ESCI vs human-final                                   76.0%  95% CI [ 62.9%,  87.2%]  (items used: 44)
+
+WHEN THE JUDGE (majority) DISAGREES WITH ESCI, WHO DOES THE HUMAN SIDE WITH?
+  items where judge-majority != ESCI: 15 of 42
+    human sides with ESCI (judge wrong): 4  (always_wrong=4)
+    human sides with JUDGE (label looks loose): 11  (always_wrong=10, random_rest=1)
+  stratum-weighted share of such disagreements where the human sides with the judge:  76.0%
+
+NEGATION HYPOTHESIS  (ESCI Exact + negation query, not always-wrong; n=11)
+  human says relevant (title only): 10/11; judge-majority says relevant: 11/11
+ALWAYS-WRONG STRATUM (n=14): human sides with ESCI 4, with the judge 10
+
+CANDIDATE LOOSE-GROUND-TRUTH CASES (11): judge 'failed' vs ESCI, human agrees with the judge
+  [419022] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: buckle cutout bodysuit
+      title: SweatyRocks Women's Stretch Cutout Yoga Sports Tee Long Sleeve Crop Top T Shirts Black Large
+      judge:  The product is a long-sleeve cutout crop top rather than a buckle cutout bodysuit.
+  [2023069] stratum=always_wrong  ESCI=Irrelevant (not relevant)  judge said relevant in 100% of runs  human(title)=yes human(details)=(same)
+      query: toddler books moo moo cow
+      title: Mr. Brown Can Moo, Can You : Dr. Seuss's Book of Wonderful Noises (Bright and Early Board Books)
+      judge:  This is a toddler-appropriate board book centered on the sound “moo,” matching the query’s request for moo moo cow-related books.
+  [1042119] stratum=random_rest  ESCI=Exact (relevant)  judge said relevant in 20% of runs  human(title)=no human(details)=(same)
+      query: ice cream
+      title: Ice Cream Fruit Learning Surprise Fun For Kids
+      judge:  The title describes an ice-cream-themed learning or surprise item for kids rather than actual ice cream.
+  [1487962] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: one wheel beach hoverboard
+      title: Segway Ninebot ES4 Folding Electric Kick Scooter with Second Battery, Dark Grey (2018 Version)
+      judge:  The product is a folding electric kick scooter, not a one-wheel beach hoverboard.
+  [594189] stratum=always_wrong  ESCI=Substitute (not relevant)  judge said relevant in 100% of runs  human(title)=yes human(details)=(same)
+      query: cosplay mask
+      title: YangYong Kitsune Fox Mask for Christmas Costume,Animal Cosplay Kabuki Half Face Cat Masks Masquerade Party
+      judge:  The product is a fox-themed half-face mask explicitly intended for animal cosplay and costume parties.
+  [1135191] stratum=always_wrong  ESCI=Substitute (not relevant)  judge said relevant in 100% of runs  human(title)=yes human(details)=(same)
+      query: key locks for kids
+      title: Guaishou Mix Color Style Mini Heart Luggage Locks Padlocks Archaize Lock with Keys Pack of 7pcs
+      judge:  The product is a pack of mini heart-shaped padlocks operated with keys, which could directly satisfy a search for locks intended for kids.
+  [1871905] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: sofa table decorations for living room
+      title: Mecor Rectangle Glass Coffee Table-White Modern Side Coffee Table with Lower Shelf Metal Legs-Suit for Living Room
+      judge:  The query seeks decorative items for a sofa table, while this product is a coffee/side table itself rather than a decoration.
+  [2027322] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: togas boys
+      title: Ravensburger - Gravitrax Kit de Inicio, Juego STEM innovador y educativo, Edad recomendada 8+, Construye tu propia pista de canicas - Dimensiones: 34 x 34 x 11 cm
+      judge:  The product is a Gravitrax marble-track construction kit, not a toga or boys' toga garment.
+  [2106495] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: vape pods device
+      title: IT'S A SKIN Decal Vinyl Wrap for Smok Novo Pod System Vape Sticker Sleeve Cover/Grey White Standard Marble
+      judge:  The product is a decorative vinyl wrap for a vape pod system rather than a vape pod device itself.
+  [2082264] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: under armour volleyball spandex
+      title: Under Armour Adult Strive 2.0 Volleyball Knee Pad , Black (001)/White , Medium
+      judge:  The product is a volleyball knee pad, not Under Armour volleyball spandex apparel.
+  [1404794] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=(same)
+      query: mtm gun case
+      title: MTM AC50C-40 50-Caliber Ammo Can, Black
+      judge:  The product is an ammunition storage can rather than a case designed to hold a gun.
+
+GENUINE JUDGE ERRORS (4): judge disagrees with ESCI and the human sides with ESCI
+  [1342383] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=yes human(details)=(same)
+      query: mercer bread knife millenia
+      title: Mercer Culinary Millennia Granton Edge Slicer, 14-Inch, Black
+      judge:  The product is a Mercer Millennia slicer rather than a bread knife, so it does not directly match the requested knife type.
+  [635884] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=yes human(details)=(same)
+      query: danny devito
+      title: Ruthless People
+      judge:  The product title does not mention Danny DeVito or provide any indication that the item is associated with him.
+  [77266] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=yes human(details)=(same)
+      query: 24 inch deep pocket king sheets
+      title: Extra Deep Pocket Sheets - 4 Piece Sheet Set - King Size Sheets Deep Pocket - Extra Deep Bed Sheets - Deep King Fitted Sheet Set - Super and Ultra Deep Sheets - For Deep Pockets Mattress - Fits Easily
+      judge:  The product is king-size and extra-deep, but its title does not confirm that it fits a 24-inch-deep mattress.
+  [1716670] stratum=always_wrong  ESCI=Substitute (not relevant)  judge said relevant in 100% of runs  human(title)=no human(details)=(same)
+      query: ri
+      title: The Fellowship Of The Ring: Being the First Part of The Lord of the Rings
+      judge:  The product title includes “Ring,” which directly matches the query prefix “ri.”
+
+ITEMS WHERE THE HUMAN CHANGED THEIR ANSWER AFTER SEEING DETAILS (4)
+  [1121801] stratum=random_rest  ESCI=Irrelevant (not relevant)  judge said relevant in 0% of runs  human(title)=no human(details)=no
+      query: jvc lt-22mar400
+      title: JVC KD-X270BT Bluetooth Car Stereo w/USB Port – AM/FM Radio, MP3 Player, High Contrast LCD, 50 Watts, Detachable Face Plate – Single DIN – 13-Band EQ
+      judge:  The product is a JVC KD-X270BT Bluetooth car stereo, not the JVC LT-22MAR400 model sought.
+  [12931] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=unsure human(details)=yes
+      query: 0.5 lead pencil without grip
+      title: uni Core Keeps Sharp Mechanical Pencil, Gun Metallic (M510171P.43)
+      judge:  The title identifies a mechanical pencil but does not specify a 0.5 mm lead size or that it lacks a grip.
+      note:   doesnt mention anything about grip, but product details confirms 0.5mm
+  [2071423] stratum=random_rest  ESCI=Substitute (not relevant)  judge said relevant in 0% of runs  human(title)=unsure human(details)=no
+      query: twin xl bedding beach
+      title: Bedsure Fleece Blanket Twin Blanket Teal - 300GSM Soft Lightweight Plush Cozy Twin Blankets for Bed, Sofa, Couch, Travel, Camping, 60x80 inches
+      judge:  The product is a standard Twin blanket rather than Twin XL bedding, and the title does not indicate a beach design or theme.
+  [1551924] stratum=random_rest  ESCI=Substitute (not relevant)  judge said relevant in 40% of runs  human(title)=no human(details)=yes
+      query: percussion accessory back
+      title: Pulse Fx Powerful Rotating Percussion Massage Gun - Deep Tissue Muscle Massager for Percussive Therapy, Pain Relief & Enhanced Recovery for Athletes - Charging Dock, 5 Attachments & 3 Speeds
+      judge:  The product is a complete percussion massage gun rather than a back-specific percussion accessory.
+
+ITEMS THE HUMAN MARKED UNSURE (3)
+  [1505368] stratum=exact_negation  ESCI=Exact (relevant)  judge said relevant in 100% of runs  human(title)=unsure human(details)=(same)
+      query: outdoor fans without lights
+      title: 72" Casa Velocity Modern Contemporary Industrial Farmhouse Indoor Outdoor Ceiling Fan Brushed Nickel Wall Control Damp Rated for Patio Exterior House Porch Gazebo Garage Barn Roof - Casa Vieja
+      judge:  The product is an indoor/outdoor ceiling fan suitable for patios and other exterior areas, and its title does not indicate a light.
+  [12931] stratum=always_wrong  ESCI=Exact (relevant)  judge said relevant in 0% of runs  human(title)=unsure human(details)=yes
+      query: 0.5 lead pencil without grip
+      title: uni Core Keeps Sharp Mechanical Pencil, Gun Metallic (M510171P.43)
+      judge:  The title identifies a mechanical pencil but does not specify a 0.5 mm lead size or that it lacks a grip.
+      note:   doesnt mention anything about grip, but product details confirms 0.5mm
+  [2071423] stratum=random_rest  ESCI=Substitute (not relevant)  judge said relevant in 0% of runs  human(title)=unsure human(details)=no
+      query: twin xl bedding beach
+      title: Bedsure Fleece Blanket Twin Blanket Teal - 300GSM Soft Lightweight Plush Cozy Twin Blankets for Bed, Sofa, Couch, Travel, Camping, 60x80 inches
+      judge:  The product is a standard Twin blanket rather than Twin XL bedding, and the title does not indicate a beach design or theme.

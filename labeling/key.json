@@ -1,0 +1,425 @@
+{
+ "run_id": "20261002T033605Z_v1_gpt-5.6-luna",
+ "seed": 7,
+ "strata": {
+  "always_wrong": {
+   "N": 465,
+   "n": 15
+  },
+  "exact_negation": {
+   "N": 42,
+   "n": 12
+  },
+  "random_rest": {
+   "N": 1493,
+   "n": 18
+  }
+ },
+ "items": [
+  {
+   "example_id": 1342383,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1505368,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 991892,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1121801,
+   "stratum": "random_rest",
+   "esci_label": "Irrelevant",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 12931,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 419022,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1158627,
+   "stratum": "random_rest",
+   "esci_label": "Complement",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 2023069,
+   "stratum": "always_wrong",
+   "esci_label": "Irrelevant",
+   "truth": 0,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 520579,
+   "stratum": "random_rest",
+   "esci_label": "Irrelevant",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 388812,
+   "stratum": "random_rest",
+   "esci_label": "Irrelevant",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 789999,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1038239,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1042119,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.2,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1487962,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 2071423,
+   "stratum": "random_rest",
+   "esci_label": "Substitute",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 594189,
+   "stratum": "always_wrong",
+   "esci_label": "Substitute",
+   "truth": 0,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1551924,
+   "stratum": "random_rest",
+   "esci_label": "Substitute",
+   "truth": 0,
+   "judge_yes_frac": 0.4,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 450663,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1135191,
+   "stratum": "always_wrong",
+   "esci_label": "Substitute",
+   "truth": 0,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1721043,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 441945,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 635884,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 2209630,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 2239694,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 151629,
+   "stratum": "random_rest",
+   "esci_label": "Irrelevant",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1871905,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 77266,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 851016,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1402156,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 16266,
+   "stratum": "random_rest",
+   "esci_label": "Complement",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 568217,
+   "stratum": "random_rest",
+   "esci_label": "Substitute",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 2027322,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 2106495,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1667476,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 2180104,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 2082264,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1131908,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 732903,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.6,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1820460,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1404794,
+   "stratum": "always_wrong",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  },
+  {
+   "example_id": 1716670,
+   "stratum": "always_wrong",
+   "esci_label": "Substitute",
+   "truth": 0,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1843045,
+   "stratum": "random_rest",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 1300230,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 622571,
+   "stratum": "exact_negation",
+   "esci_label": "Exact",
+   "truth": 1,
+   "judge_yes_frac": 1.0,
+   "n_valid_runs": 5,
+   "judge_majority": true
+  },
+  {
+   "example_id": 2184715,
+   "stratum": "random_rest",
+   "esci_label": "Irrelevant",
+   "truth": 0,
+   "judge_yes_frac": 0.0,
+   "n_valid_runs": 5,
+   "judge_majority": false
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+pandas
+pyarrow
+datasets
+numpy
+scipy
+pyyaml
+python-dotenv
+openai
+matplotlib
+pytest
+tqdm
